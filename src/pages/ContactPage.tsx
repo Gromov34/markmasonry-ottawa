@@ -11,8 +11,8 @@ const ContactPage = () => {
     {
       icon: Phone,
       label: language === 'en' ? 'Phone' : 'Téléphone',
-      value: t('contact.info.phone'),
-      href: 'tel:+16135556276',
+      value: '+1 437-552-3366',
+      href: 'tel:+14375523366',
     },
     {
       icon: Mail,

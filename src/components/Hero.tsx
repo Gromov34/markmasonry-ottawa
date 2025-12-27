@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Phone, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import heroImage from '@/assets/hero-masonry.jpg';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -37,7 +38,7 @@ const Hero = () => {
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <a href="tel:+16135556276">
+              <a href="tel:+14375523366">
                 <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
                   <Phone size={20} />
                   {t('hero.callNow')}
@@ -57,7 +58,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <div className="w-2 h-2 rounded-full bg-green-400" />
-                <span className="text-sm">20+ Years Experience</span>
+                <span className="text-sm">10+ Years Experience</span>
               </div>
             </div>
           </div>
@@ -66,8 +67,8 @@ const Hero = () => {
           <div className="relative animate-fade-in-right hidden lg:block" style={{ animationDelay: '0.3s' }}>
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
-                alt="Beautiful brick home in Ottawa"
+                src={heroImage}
+                alt="MarkMasonry construction work in Ottawa"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
@@ -76,7 +77,7 @@ const Hero = () => {
             <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-6 shadow-card animate-scale-in" style={{ animationDelay: '0.5s' }}>
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl font-heading font-bold text-primary">20+</span>
+                  <span className="text-2xl font-heading font-bold text-primary">10+</span>
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-foreground">{t('about.experience')}</p>

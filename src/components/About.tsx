@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Users, ThumbsUp, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import chimneyWork from '@/assets/chimney-work.jpg';
 
 const About = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { icon: Award, value: '20+', label: t('about.experience') },
+    { icon: Award, value: '10+', label: t('about.experience') },
     { icon: Users, value: '2,500+', label: t('about.projects') },
     { icon: ThumbsUp, value: '98%', label: t('about.satisfaction') },
     { icon: Shield, value: '5', label: t('about.warranty') },
@@ -21,7 +22,7 @@ const About = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-elevated">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                src={chimneyWork}
                 alt="Masonry craftsman at work"
                 className="w-full h-[500px] object-cover"
               />

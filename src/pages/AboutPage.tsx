@@ -8,7 +8,7 @@ const AboutPage = () => {
   const { t, language } = useLanguage();
 
   const stats = [
-    { icon: Award, value: '20+', label: t('about.experience') },
+    { icon: Award, value: '10+', label: t('about.experience') },
     { icon: Users, value: '2,500+', label: t('about.projects') },
     { icon: ThumbsUp, value: '98%', label: t('about.satisfaction') },
     { icon: Shield, value: '5', label: t('about.warranty') },
@@ -89,8 +89,8 @@ const AboutPage = () => {
                 <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                   <p>
                     {language === 'en'
-                      ? 'Founded in 2004, MarkMasonry has grown from a small family business to one of Ottawa\'s most trusted masonry contractors. Our founder, Mark Johnson, started with a simple mission: deliver exceptional quality and honest service to every customer.'
-                      : 'Fondée en 2004, MarkMasonry est passée d\'une petite entreprise familiale à l\'un des entrepreneurs en maçonnerie les plus fiables d\'Ottawa. Notre fondateur, Mark Johnson, a commencé avec une mission simple: offrir une qualité exceptionnelle et un service honnête à chaque client.'}
+                      ? 'Founded in 2014, MarkMasonry has grown from a small family business to one of Ottawa\'s most trusted masonry contractors. Our founder, Mark Johnson, started with a simple mission: deliver exceptional quality and honest service to every customer.'
+                      : 'Fondée en 2014, MarkMasonry est passée d\'une petite entreprise familiale à l\'un des entrepreneurs en maçonnerie les plus fiables d\'Ottawa. Notre fondateur, Mark Johnson, a commencé avec une mission simple: offrir une qualité exceptionnelle et un service honnête à chaque client.'}
                   </p>
                   <p>
                     {language === 'en'
