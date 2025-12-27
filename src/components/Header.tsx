@@ -61,9 +61,9 @@ const Header = () => {
               <Globe size={18} />
               {language === 'en' ? 'FR' : 'EN'}
             </button>
-            <a href="tel:+16135556276" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors">
+            <a href="tel:+14375523366" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors">
               <Phone size={18} />
-              <span className="font-medium">(613) 555-MASON</span>
+              <span className="font-medium">+1 437-552-3366</span>
             </a>
             <Link to="/contact">
               <Button variant="hero" size="default">
@@ -111,11 +111,11 @@ const Header = () => {
               ))}
               <div className="pt-4 px-4 space-y-3">
                 <a
-                  href="tel:+16135556276"
+                  href="tel:+14375523366"
                   className="flex items-center gap-2 text-foreground/80 py-2"
                 >
                   <Phone size={18} />
-                  <span>(613) 555-MASON</span>
+                  <span>+1 437-552-3366</span>
                 </a>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <Button variant="hero" size="lg" className="w-full">

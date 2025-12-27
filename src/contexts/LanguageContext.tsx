@@ -21,7 +21,7 @@ const translations = {
     // Hero
     'hero.title': 'Expert Masonry Craftsmanship',
     'hero.subtitle': 'Ottawa & Surrounding Areas',
-    'hero.description': 'Transform your property with premium brick, stone, and concrete work. Over 20 years of trusted experience serving Ottawa, Gatineau, and the National Capital Region.',
+    'hero.description': 'Transform your property with premium brick, stone, and concrete work. Over 10 years of trusted experience serving Ottawa, Gatineau, and the National Capital Region.',
     'hero.cta': 'Request Free Estimate',
     'hero.callNow': 'Call Now',
 
@@ -46,7 +46,7 @@ const translations = {
     // About
     'about.title': 'About MarkMasonry',
     'about.subtitle': 'Building Trust, One Brick at a Time',
-    'about.description': 'For over two decades, MarkMasonry has been the trusted choice for masonry services in Ottawa and the surrounding region. Our team of skilled craftsmen combines traditional techniques with modern innovation to deliver exceptional results.',
+    'about.description': 'For over a decade, MarkMasonry has been the trusted choice for masonry services in Ottawa and the surrounding region. Our team of skilled craftsmen combines traditional techniques with modern innovation to deliver exceptional results.',
     'about.experience': 'Years Experience',
     'about.projects': 'Projects Completed',
     'about.satisfaction': 'Customer Satisfaction',
@@ -75,7 +75,7 @@ const translations = {
     'contact.form.success': 'Thank you! We will contact you within 24 hours.',
     'contact.info.title': 'Contact Information',
     'contact.info.address': '123 Mason Street, Ottawa, ON K1A 0B1',
-    'contact.info.phone': '(613) 555-MASON',
+    'contact.info.phone': '+1 437-552-3366',
     'contact.info.email': 'info@markmasonry.ca',
     'contact.info.hours': 'Mon-Fri: 7AM - 6PM | Sat: 8AM - 4PM',
 
@@ -119,7 +119,7 @@ const translations = {
     // Hero
     'hero.title': 'Maçonnerie Artisanale Expert',
     'hero.subtitle': 'Ottawa et Environs',
-    'hero.description': 'Transformez votre propriété avec des travaux de brique, pierre et béton de qualité supérieure. Plus de 20 ans d\'expérience au service d\'Ottawa, Gatineau et la région de la capitale nationale.',
+    'hero.description': 'Transformez votre propriété avec des travaux de brique, pierre et béton de qualité supérieure. Plus de 10 ans d\'expérience au service d\'Ottawa, Gatineau et la région de la capitale nationale.',
     'hero.cta': 'Demander une Estimation',
     'hero.callNow': 'Appelez Maintenant',
 
@@ -144,7 +144,7 @@ const translations = {
     // About
     'about.title': 'À Propos de MarkMasonry',
     'about.subtitle': 'Bâtir la Confiance, Brique par Brique',
-    'about.description': 'Depuis plus de deux décennies, MarkMasonry est le choix de confiance pour les services de maçonnerie à Ottawa et dans la région environnante. Notre équipe d\'artisans qualifiés combine techniques traditionnelles et innovation moderne pour livrer des résultats exceptionnels.',
+    'about.description': 'Depuis plus d\'une décennie, MarkMasonry est le choix de confiance pour les services de maçonnerie à Ottawa et dans la région environnante. Notre équipe d\'artisans qualifiés combine techniques traditionnelles et innovation moderne pour livrer des résultats exceptionnels.',
     'about.experience': 'Ans d\'Expérience',
     'about.projects': 'Projets Complétés',
     'about.satisfaction': 'Satisfaction Client',
@@ -173,7 +173,7 @@ const translations = {
     'contact.form.success': 'Merci! Nous vous contacterons dans les 24 heures.',
     'contact.info.title': 'Coordonnées',
     'contact.info.address': '123 rue Mason, Ottawa, ON K1A 0B1',
-    'contact.info.phone': '(613) 555-MASON',
+    'contact.info.phone': '+1 437-552-3366',
     'contact.info.email': 'info@markmasonry.ca',
     'contact.info.hours': 'Lun-Ven: 7h - 18h | Sam: 8h - 16h',
 
