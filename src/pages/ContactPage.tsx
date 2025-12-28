@@ -18,7 +18,7 @@ const ContactPage = () => {
       icon: Mail,
       label: language === 'en' ? 'Email' : 'Courriel',
       value: t('contact.info.email'),
-      href: 'mailto:info@markmasonry.ca',
+      href: 'mailto:markmasonry10@gmail.com',
     },
     {
       icon: MapPin,
