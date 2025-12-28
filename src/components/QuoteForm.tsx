@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const QuoteForm = () => {
   const { t, language } = useLanguage();
@@ -35,16 +36,37 @@ const QuoteForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const service = formData.get('service') as string;
+    const message = formData.get('message') as string;
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    toast({
-      title: language === 'en' ? 'Request Sent!' : 'Demande Envoyée!',
-      description: t('contact.form.success'),
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-telegram', {
+        body: { name, email, phone, service, message }
+      });
+      
+      if (error) throw error;
+      
+      setIsSubmitted(true);
+      toast({
+        title: language === 'en' ? 'Request Sent!' : 'Demande Envoyée!',
+        description: t('contact.form.success'),
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: language === 'en' ? 'Error' : 'Erreur',
+        description: language === 'en' 
+          ? 'Failed to send request. Please try again.' 
+          : 'Échec de l\'envoi. Veuillez réessayer.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
