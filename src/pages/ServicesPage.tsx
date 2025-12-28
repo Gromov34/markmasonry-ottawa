@@ -5,6 +5,12 @@ import Layout from '@/components/Layout';
 import CTA from '@/components/CTA';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import serviceBrickImg from '@/assets/service-brick.jpg';
+import serviceChimneyImg from '@/assets/service-chimney.jpg';
+import serviceConcreteImg from '@/assets/service-concrete.jpg';
+import serviceRestorationImg from '@/assets/service-restoration.jpg';
+import serviceFoundationImg from '@/assets/service-foundation.jpg';
+import serviceTuckpointingImg from '@/assets/service-tuckpointing.jpg';
 
 const ServicesPage = () => {
   const { t, language } = useLanguage();
@@ -17,7 +23,7 @@ const ServicesPage = () => {
       features: language === 'en' 
         ? ['New brick installation', 'Stone veneer facades', 'Retaining walls', 'Decorative accents', 'Brick matching']
         : ['Installation de briques neuves', 'Façades en pierre', 'Murs de soutènement', 'Accents décoratifs', 'Appariement de briques'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
+      image: serviceBrickImg,
     },
     {
       icon: Flame,
@@ -26,7 +32,7 @@ const ServicesPage = () => {
       features: language === 'en'
         ? ['Full chimney rebuild', 'Crown repair', 'Flashing installation', 'Waterproofing', 'Cap installation']
         : ['Reconstruction complète', 'Réparation de couronne', 'Installation de solin', 'Imperméabilisation', 'Installation de chapeau'],
-      image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80',
+      image: serviceChimneyImg,
     },
     {
       icon: Construction,
@@ -35,7 +41,7 @@ const ServicesPage = () => {
       features: language === 'en'
         ? ['Driveways', 'Patios & walkways', 'Stamped concrete', 'Foundation slabs', 'Concrete repair']
         : ['Entrées de garage', 'Patios et allées', 'Béton estampé', 'Dalles de fondation', 'Réparation de béton'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
+      image: serviceConcreteImg,
     },
     {
       icon: Building2,
@@ -44,7 +50,7 @@ const ServicesPage = () => {
       features: language === 'en'
         ? ['Historic preservation', 'Color matching', 'Period-appropriate repairs', 'Structural assessment', 'Documentation']
         : ['Préservation historique', 'Appariement des couleurs', 'Réparations appropriées', 'Évaluation structurelle', 'Documentation'],
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+      image: serviceRestorationImg,
     },
     {
       icon: Wrench,
@@ -53,7 +59,7 @@ const ServicesPage = () => {
       features: language === 'en'
         ? ['Crack repair', 'Waterproofing', 'Underpinning', 'Parging', 'Drainage solutions']
         : ['Réparation de fissures', 'Imperméabilisation', 'Sous-œuvre', 'Crépis', 'Solutions de drainage'],
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+      image: serviceFoundationImg,
     },
     {
       icon: Hammer,
@@ -62,7 +68,7 @@ const ServicesPage = () => {
       features: language === 'en'
         ? ['Mortar removal', 'Joint repointing', 'Color matching', 'Weather sealing', 'Preventive maintenance']
         : ['Retrait du mortier', 'Rejointoiement', 'Appariement des couleurs', 'Étanchéité', 'Entretien préventif'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
+      image: serviceTuckpointingImg,
     },
   ];
 
