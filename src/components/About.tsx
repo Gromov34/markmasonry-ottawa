@@ -9,7 +9,7 @@ const About = () => {
 
   const stats = [
     { icon: Award, value: '10+', label: t('about.experience') },
-    { icon: Users, value: '2,500+', label: t('about.projects') },
+    { icon: Users, value: '500+', label: t('about.projects') },
     { icon: ThumbsUp, value: '98%', label: t('about.satisfaction') },
     { icon: Shield, value: '5', label: t('about.warranty') },
   ];
