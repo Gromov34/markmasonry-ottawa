@@ -46,6 +46,11 @@ const Footer = () => {
                 href="https://www.instagram.com/mark.masonry/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  // Some embedded previews block normal navigation; force a new tab.
+                  e.preventDefault();
+                  window.open('https://www.instagram.com/mark.masonry/', '_blank', 'noopener,noreferrer');
+                }}
                 className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Instagram"
               >
