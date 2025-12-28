@@ -20,12 +20,20 @@ serve(async (req) => {
   }
 
   try {
-    const TELEGRAM_BOT_TOKEN = Deno.env.get('TELEGRAM_BOT_TOKEN');
-    const TELEGRAM_CHAT_ID = Deno.env.get('TELEGRAM_CHAT_ID');
+    const TELEGRAM_BOT_TOKEN = (Deno.env.get('TELEGRAM_BOT_TOKEN') ?? '').trim();
+    const TELEGRAM_CHAT_ID = (Deno.env.get('TELEGRAM_CHAT_ID') ?? '').trim();
 
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
       console.error('Missing Telegram configuration');
       throw new Error('Telegram configuration is missing');
+    }
+
+    // Validate bot token early (Telegram returns 404 for invalid tokens)
+    const meResp = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe`);
+    const meJson = await meResp.json().catch(() => null);
+    console.log('Telegram getMe response:', meJson);
+    if (!meJson?.ok) {
+      throw new Error(`Telegram bot token invalid (getMe): ${meJson?.description ?? 'Unknown error'}`);
     }
 
     const { name, email, phone, service, message }: QuoteRequest = await req.json();
