@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import CTA from '@/components/CTA';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -13,6 +14,7 @@ import brickRepair from '@/assets/gallery/brick-repair.jpg';
 
 const GalleryPage = () => {
   const { t, language } = useLanguage();
+  const navigate = useNavigate();
 
   const projects = [
     {
@@ -101,14 +103,20 @@ const GalleryPage = () => {
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="group bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300"
+                  onClick={() => navigate('/contact')}
+                  className="group bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300 flex items-center justify-center">
+                      <span className="text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary px-4 py-2 rounded-full text-sm">
+                        {language === 'en' ? 'Get a Quote' : 'Obtenir un Devis'}
+                      </span>
+                    </div>
                   </div>
                   <div className="p-5">
                     <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
