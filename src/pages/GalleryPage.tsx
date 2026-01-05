@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import CTA from '@/components/CTA';
@@ -6,77 +5,105 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const GalleryPage = () => {
   const { t, language } = useLanguage();
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  const filters = [
-    { id: 'all', label: t('gallery.all') },
-    { id: 'residential', label: t('gallery.residential') },
-    { id: 'commercial', label: t('gallery.commercial') },
-    { id: 'restoration', label: t('gallery.restoration') },
-  ];
 
   const projects = [
     {
       id: 1,
-      category: 'residential',
-      title: language === 'en' ? 'Victorian Home Brick Repair' : 'Réparation de Briques Maison Victorienne',
-      location: 'Glebe, Ottawa',
-      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Foundation Preparation' : 'Préparation de la Fondation',
+      description: language === 'en' 
+        ? 'Laying concrete blocks for a solid residential foundation. Every block is carefully leveled and aligned.'
+        : 'Pose de blocs de béton pour une fondation résidentielle solide. Chaque bloc est soigneusement nivelé et aligné.',
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 2,
-      category: 'residential',
-      title: language === 'en' ? 'Natural Stone Patio' : 'Patio en Pierre Naturelle',
-      location: 'Kanata, ON',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Chimney Brick Removal' : 'Démolition de Cheminée',
+      description: language === 'en'
+        ? 'Carefully dismantling an old chimney brick by brick. Safety and precision are our priorities.'
+        : 'Démontage minutieux d\'une vieille cheminée brique par brique. Sécurité et précision sont nos priorités.',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 3,
-      category: 'commercial',
-      title: language === 'en' ? 'Commercial Building Facade' : 'Façade de Bâtiment Commercial',
-      location: 'ByWard Market',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Mortar Joint Cutting' : 'Découpe des Joints de Mortier',
+      description: language === 'en'
+        ? 'Using specialized tools to cut out old, deteriorated mortar joints before repointing.'
+        : 'Utilisation d\'outils spécialisés pour découper les anciens joints de mortier détériorés avant le rejointoiement.',
+      image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 4,
-      category: 'restoration',
-      title: language === 'en' ? 'Heritage Stone Restoration' : 'Restauration de Pierre Patrimoniale',
-      location: 'Parliament Hill Area',
-      image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Fresh Tuckpointing' : 'Rejointoiement Frais',
+      description: language === 'en'
+        ? 'Applying new mortar to brick joints. The color is matched perfectly to the original.'
+        : 'Application de nouveau mortier dans les joints de briques. La couleur est parfaitement assortie à l\'original.',
+      image: 'https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 5,
-      category: 'residential',
-      title: language === 'en' ? 'Chimney Rebuild' : 'Reconstruction de Cheminée',
-      location: 'Orleans, ON',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Brick Wall Construction' : 'Construction de Mur en Briques',
+      description: language === 'en'
+        ? 'Building a new brick wall for a residential home. Each row is checked for level and plumb.'
+        : 'Construction d\'un nouveau mur de briques pour une maison résidentielle. Chaque rangée est vérifiée.',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 6,
-      category: 'commercial',
-      title: language === 'en' ? 'Retail Storefront' : 'Façade de Commerce',
-      location: 'Westboro, Ottawa',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Concrete Mixing' : 'Mélange de Béton',
+      description: language === 'en'
+        ? 'Preparing the perfect concrete mix for foundation work. The right consistency is crucial.'
+        : 'Préparation du mélange de béton parfait pour les travaux de fondation. La bonne consistance est cruciale.',
+      image: 'https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 7,
-      category: 'restoration',
-      title: language === 'en' ? 'Historic Church Restoration' : 'Restauration d\'Église Historique',
-      location: 'Sandy Hill, Ottawa',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Stone Patio Installation' : 'Installation de Patio en Pierre',
+      description: language === 'en'
+        ? 'Installing natural stone pavers for a backyard patio. Creating outdoor living spaces for families.'
+        : 'Installation de pavés en pierre naturelle pour un patio arrière. Création d\'espaces de vie extérieurs.',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 8,
-      category: 'residential',
-      title: language === 'en' ? 'Stone Retaining Wall' : 'Mur de Soutènement en Pierre',
-      location: 'Gatineau, QC',
-      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80',
+      title: language === 'en' ? 'Chimney Cap Repair' : 'Réparation du Chapeau de Cheminée',
+      description: language === 'en'
+        ? 'Rebuilding the chimney crown to prevent water damage. Essential maintenance for homeowners.'
+        : 'Reconstruction de la couronne de cheminée pour prévenir les dégâts d\'eau. Entretien essentiel.',
+      image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 9,
+      title: language === 'en' ? 'Retaining Wall Build' : 'Construction de Mur de Soutènement',
+      description: language === 'en'
+        ? 'Building a stone retaining wall to manage yard drainage and create beautiful landscaping.'
+        : 'Construction d\'un mur de soutènement en pierre pour gérer le drainage et créer un bel aménagement.',
+      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 10,
+      title: language === 'en' ? 'Brick Cleaning & Sealing' : 'Nettoyage et Scellement de Briques',
+      description: language === 'en'
+        ? 'Power washing and sealing brick surfaces to protect against Ottawa\'s harsh winters.'
+        : 'Lavage sous pression et scellement des surfaces de briques pour protéger contre les hivers rigoureux.',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 11,
+      title: language === 'en' ? 'Step Repair' : 'Réparation d\'Escalier',
+      description: language === 'en'
+        ? 'Rebuilding front porch steps with new bricks. Safe, sturdy, and beautiful results.'
+        : 'Reconstruction des marches du porche avant avec de nouvelles briques. Résultats sûrs et beaux.',
+      image: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 12,
+      title: language === 'en' ? 'Foundation Waterproofing' : 'Imperméabilisation de Fondation',
+      description: language === 'en'
+        ? 'Applying waterproof membrane to basement foundation walls. Protecting homes from moisture.'
+        : 'Application de membrane imperméable aux murs de fondation du sous-sol. Protection contre l\'humidité.',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80',
     },
   ];
-
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === activeFilter);
 
   return (
     <>
@@ -85,8 +112,8 @@ const GalleryPage = () => {
         <meta 
           name="description" 
           content={language === 'en'
-            ? "Browse our portfolio of masonry projects in Ottawa. See our brick work, stone installations, chimney repairs, and heritage restorations."
-            : "Parcourez notre portfolio de projets de maçonnerie à Ottawa. Voyez nos travaux de brique, installations de pierre, réparations de cheminée et restaurations patrimoniales."}
+            ? "See our masonry work in action. Foundation laying, chimney repair, tuckpointing, and more for Ottawa homeowners."
+            : "Voyez notre travail de maçonnerie en action. Pose de fondation, réparation de cheminée, rejointoiement et plus pour les propriétaires d'Ottawa."}
         />
       </Helmet>
       <Layout>
@@ -98,7 +125,9 @@ const GalleryPage = () => {
                 {t('gallery.title')}
               </h1>
               <p className="text-xl text-primary-foreground/80">
-                {t('gallery.subtitle')}
+                {language === 'en' 
+                  ? '500+ projects completed for Ottawa homeowners. See our craftsmanship in action.'
+                  : '500+ projets réalisés pour les propriétaires d\'Ottawa. Voyez notre savoir-faire en action.'}
               </p>
             </div>
           </div>
@@ -107,29 +136,12 @@ const GalleryPage = () => {
         {/* Gallery Section */}
         <section className="section-padding bg-background">
           <div className="container-custom">
-            {/* Filters */}
-            <div className="flex flex-wrap gap-3 mb-12 justify-center">
-              {filters.map((filter) => (
-                <button
-                  key={filter.id}
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`px-6 py-2.5 rounded-full font-medium transition-all ${
-                    activeFilter === filter.id
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-card text-foreground hover:bg-muted border border-border'
-                  }`}
-                >
-                  {filter.label}
-                </button>
-              ))}
-            </div>
-
             {/* Gallery Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300"
+                  className="group bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
@@ -138,12 +150,13 @@ const GalleryPage = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                    <h3 className="font-heading text-lg font-semibold text-primary-foreground mb-1">
+                  <div className="p-5">
+                    <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-primary-foreground/70 text-sm">{project.location}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
               ))}
