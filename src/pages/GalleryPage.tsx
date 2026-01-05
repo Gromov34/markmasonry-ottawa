@@ -3,105 +3,65 @@ import Layout from '@/components/Layout';
 import CTA from '@/components/CTA';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+// Import real work photos
+import chimneyScaffolding from '@/assets/gallery/chimney-scaffolding.jpg';
+import brickCaulking from '@/assets/gallery/brick-caulking.jpg';
+import chimneyBlocks from '@/assets/gallery/chimney-blocks.jpg';
+import concreteRepair from '@/assets/gallery/concrete-repair.jpg';
+import chimneyFlue from '@/assets/gallery/chimney-flue.jpg';
+import brickRepair from '@/assets/gallery/brick-repair.jpg';
+
 const GalleryPage = () => {
   const { t, language } = useLanguage();
 
   const projects = [
     {
       id: 1,
-      title: language === 'en' ? 'Foundation Preparation' : 'Préparation de la Fondation',
+      title: language === 'en' ? 'Chimney Repair Setup' : 'Préparation Réparation Cheminée',
       description: language === 'en' 
-        ? 'Laying concrete blocks for a solid residential foundation. Every block is carefully leveled and aligned.'
-        : 'Pose de blocs de béton pour une fondation résidentielle solide. Chaque bloc est soigneusement nivelé et aligné.',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+        ? 'Professional scaffolding setup for safe chimney access. We ensure proper safety measures on every residential project.'
+        : 'Installation d\'échafaudage professionnel pour un accès sécurisé à la cheminée. Nous assurons des mesures de sécurité appropriées.',
+      image: chimneyScaffolding,
     },
     {
       id: 2,
-      title: language === 'en' ? 'Chimney Brick Removal' : 'Démolition de Cheminée',
+      title: language === 'en' ? 'Brick Caulking Work' : 'Travaux de Calfeutrage de Briques',
       description: language === 'en'
-        ? 'Carefully dismantling an old chimney brick by brick. Safety and precision are our priorities.'
-        : 'Démontage minutieux d\'une vieille cheminée brique par brique. Sécurité et précision sont nos priorités.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+        ? 'Sealing and caulking around window frames to prevent water infiltration. Protecting your home from moisture damage.'
+        : 'Scellement et calfeutrage autour des cadres de fenêtres pour prévenir l\'infiltration d\'eau.',
+      image: brickCaulking,
     },
     {
       id: 3,
-      title: language === 'en' ? 'Mortar Joint Cutting' : 'Découpe des Joints de Mortier',
+      title: language === 'en' ? 'Chimney Rebuild in Progress' : 'Reconstruction de Cheminée en Cours',
       description: language === 'en'
-        ? 'Using specialized tools to cut out old, deteriorated mortar joints before repointing.'
-        : 'Utilisation d\'outils spécialisés pour découper les anciens joints de mortier détériorés avant le rejointoiement.',
-      image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80',
+        ? 'Laying concrete blocks for a new chimney base. Every block is carefully leveled for a solid foundation.'
+        : 'Pose de blocs de béton pour une nouvelle base de cheminée. Chaque bloc est soigneusement nivelé.',
+      image: chimneyBlocks,
     },
     {
       id: 4,
-      title: language === 'en' ? 'Fresh Tuckpointing' : 'Rejointoiement Frais',
+      title: language === 'en' ? 'Concrete Step Repair' : 'Réparation de Marches en Béton',
       description: language === 'en'
-        ? 'Applying new mortar to brick joints. The color is matched perfectly to the original.'
-        : 'Application de nouveau mortier dans les joints de briques. La couleur est parfaitement assortie à l\'original.',
-      image: 'https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?auto=format&fit=crop&w=800&q=80',
+        ? 'Fixing damaged concrete around patio areas. We repair and restore walkways for safety and appearance.'
+        : 'Réparation du béton endommagé autour des patios. Nous réparons et restaurons les allées.',
+      image: concreteRepair,
     },
     {
       id: 5,
-      title: language === 'en' ? 'Brick Wall Construction' : 'Construction de Mur en Briques',
+      title: language === 'en' ? 'Chimney Flue Installation' : 'Installation de Conduit de Cheminée',
       description: language === 'en'
-        ? 'Building a new brick wall for a residential home. Each row is checked for level and plumb.'
-        : 'Construction d\'un nouveau mur de briques pour une maison résidentielle. Chaque rangée est vérifiée.',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80',
+        ? 'Installing new chimney flue liners with proper brick work. Ensuring safe and efficient ventilation for your home.'
+        : 'Installation de nouveaux conduits de cheminée avec maçonnerie appropriée. Ventilation sûre et efficace.',
+      image: chimneyFlue,
     },
     {
       id: 6,
-      title: language === 'en' ? 'Concrete Mixing' : 'Mélange de Béton',
+      title: language === 'en' ? 'Brick Wall Repair' : 'Réparation de Mur de Briques',
       description: language === 'en'
-        ? 'Preparing the perfect concrete mix for foundation work. The right consistency is crucial.'
-        : 'Préparation du mélange de béton parfait pour les travaux de fondation. La bonne consistance est cruciale.',
-      image: 'https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 7,
-      title: language === 'en' ? 'Stone Patio Installation' : 'Installation de Patio en Pierre',
-      description: language === 'en'
-        ? 'Installing natural stone pavers for a backyard patio. Creating outdoor living spaces for families.'
-        : 'Installation de pavés en pierre naturelle pour un patio arrière. Création d\'espaces de vie extérieurs.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 8,
-      title: language === 'en' ? 'Chimney Cap Repair' : 'Réparation du Chapeau de Cheminée',
-      description: language === 'en'
-        ? 'Rebuilding the chimney crown to prevent water damage. Essential maintenance for homeowners.'
-        : 'Reconstruction de la couronne de cheminée pour prévenir les dégâts d\'eau. Entretien essentiel.',
-      image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 9,
-      title: language === 'en' ? 'Retaining Wall Build' : 'Construction de Mur de Soutènement',
-      description: language === 'en'
-        ? 'Building a stone retaining wall to manage yard drainage and create beautiful landscaping.'
-        : 'Construction d\'un mur de soutènement en pierre pour gérer le drainage et créer un bel aménagement.',
-      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 10,
-      title: language === 'en' ? 'Brick Cleaning & Sealing' : 'Nettoyage et Scellement de Briques',
-      description: language === 'en'
-        ? 'Power washing and sealing brick surfaces to protect against Ottawa\'s harsh winters.'
-        : 'Lavage sous pression et scellement des surfaces de briques pour protéger contre les hivers rigoureux.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 11,
-      title: language === 'en' ? 'Step Repair' : 'Réparation d\'Escalier',
-      description: language === 'en'
-        ? 'Rebuilding front porch steps with new bricks. Safe, sturdy, and beautiful results.'
-        : 'Reconstruction des marches du porche avant avec de nouvelles briques. Résultats sûrs et beaux.',
-      image: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 12,
-      title: language === 'en' ? 'Foundation Waterproofing' : 'Imperméabilisation de Fondation',
-      description: language === 'en'
-        ? 'Applying waterproof membrane to basement foundation walls. Protecting homes from moisture.'
-        : 'Application de membrane imperméable aux murs de fondation du sous-sol. Protection contre l\'humidité.',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80',
+        ? 'Repairing and repointing brick walls on residential homes. Using proper techniques to match existing mortar.'
+        : 'Réparation et rejointoiement de murs de briques résidentiels. Techniques appropriées pour correspondre au mortier.',
+      image: brickRepair,
     },
   ];
 
