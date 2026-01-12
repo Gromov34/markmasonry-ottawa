@@ -12,7 +12,7 @@ import serviceRestorationImg from '@/assets/service-restoration.jpg';
 import serviceFoundationImg from '@/assets/service-foundation.jpg';
 import serviceTuckpointingImg from '@/assets/service-tuckpointing.jpg';
 import serviceCaulkingImg from '@/assets/gallery/brick-caulking.jpg';
-import serviceWindowSillsImg from '@/assets/gallery/concrete-repair.jpg';
+import serviceWindowSillsImg from '@/assets/service-window-sills.jpg';
 
 const ServicesPage = () => {
   const { t, language } = useLanguage();
