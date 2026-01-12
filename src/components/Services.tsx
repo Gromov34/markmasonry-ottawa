@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wrench, Home, Flame, Construction, Building2, Hammer } from 'lucide-react';
+import { ArrowRight, Wrench, Home, Flame, Construction, Building2, Hammer, Droplets, LayoutTemplate } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -36,6 +36,16 @@ const Services = () => {
       icon: Hammer,
       title: t('services.tuckpointing.title'),
       description: t('services.tuckpointing.desc'),
+    },
+    {
+      icon: Droplets,
+      title: t('services.caulking.title'),
+      description: t('services.caulking.desc'),
+    },
+    {
+      icon: LayoutTemplate,
+      title: t('services.windowsills.title'),
+      description: t('services.windowsills.desc'),
     },
   ];
 

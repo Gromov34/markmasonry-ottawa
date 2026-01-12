@@ -40,6 +40,10 @@ const translations = {
     'services.foundation.desc': 'Structural foundation repairs, waterproofing, and reinforcement services.',
     'services.tuckpointing.title': 'Tuckpointing',
     'services.tuckpointing.desc': 'Professional mortar joint repair to extend the life of your masonry.',
+    'services.caulking.title': 'Caulking & Silicone',
+    'services.caulking.desc': 'Professional silicone and caulking application on any surface for lasting waterproof protection.',
+    'services.windowsills.title': 'Window Sills',
+    'services.windowsills.desc': 'Expert installation and repair of concrete and stone window sills for a polished exterior finish.',
     'services.learnMore': 'Learn More',
     'services.viewAll': 'View All Services',
 
@@ -138,6 +142,10 @@ const translations = {
     'services.foundation.desc': 'Réparations structurelles de fondation, imperméabilisation et services de renforcement.',
     'services.tuckpointing.title': 'Rejointoiement',
     'services.tuckpointing.desc': 'Réparation professionnelle des joints de mortier pour prolonger la vie de votre maçonnerie.',
+    'services.caulking.title': 'Calfeutrage & Silicone',
+    'services.caulking.desc': 'Application professionnelle de silicone et calfeutrage sur toute surface pour une protection imperméable durable.',
+    'services.windowsills.title': 'Appuis de Fenêtre',
+    'services.windowsills.desc': 'Installation et réparation experte d\'appuis de fenêtre en béton et pierre pour une finition extérieure soignée.',
     'services.learnMore': 'En Savoir Plus',
     'services.viewAll': 'Voir Tous les Services',
 
