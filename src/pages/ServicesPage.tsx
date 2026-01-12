@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Home, Flame, Construction, Building2, Wrench, Hammer, CheckCircle } from 'lucide-react';
+import { ArrowRight, Home, Flame, Construction, Building2, Wrench, Hammer, Droplets, LayoutTemplate, CheckCircle } from 'lucide-react';
 import Layout from '@/components/Layout';
 import CTA from '@/components/CTA';
 import { Button } from '@/components/ui/button';
@@ -11,6 +11,8 @@ import serviceConcreteImg from '@/assets/service-concrete.jpg';
 import serviceRestorationImg from '@/assets/service-restoration.jpg';
 import serviceFoundationImg from '@/assets/service-foundation.jpg';
 import serviceTuckpointingImg from '@/assets/service-tuckpointing.jpg';
+import serviceCaulkingImg from '@/assets/gallery/brick-caulking.jpg';
+import serviceWindowSillsImg from '@/assets/gallery/concrete-repair.jpg';
 
 const ServicesPage = () => {
   const { t, language } = useLanguage();
@@ -69,6 +71,24 @@ const ServicesPage = () => {
         ? ['Mortar removal', 'Joint repointing', 'Color matching', 'Weather sealing', 'Preventive maintenance']
         : ['Retrait du mortier', 'Rejointoiement', 'Appariement des couleurs', 'Étanchéité', 'Entretien préventif'],
       image: serviceTuckpointingImg,
+    },
+    {
+      icon: Droplets,
+      title: t('services.caulking.title'),
+      description: t('services.caulking.desc'),
+      features: language === 'en'
+        ? ['Window caulking', 'Door sealing', 'Expansion joints', 'Silicone application', 'Weatherproofing']
+        : ['Calfeutrage de fenêtres', 'Étanchéité des portes', 'Joints de dilatation', 'Application de silicone', 'Imperméabilisation'],
+      image: serviceCaulkingImg,
+    },
+    {
+      icon: LayoutTemplate,
+      title: t('services.windowsills.title'),
+      description: t('services.windowsills.desc'),
+      features: language === 'en'
+        ? ['Stone sills', 'Concrete sills', 'Sill replacement', 'Custom fabrication', 'Restoration work']
+        : ['Appuis en pierre', 'Appuis en béton', 'Remplacement d\'appuis', 'Fabrication sur mesure', 'Travaux de restauration'],
+      image: serviceWindowSillsImg,
     },
   ];
 
